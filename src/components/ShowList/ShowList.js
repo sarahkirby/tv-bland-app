@@ -11,7 +11,7 @@ class ShowList extends React.Component {
   }
 
   fetchShowList = () => {
-    fetch('http://api.tvmaze.com/schedule?country=GB')
+    fetch('http://api.tvmaze.com/schedule?country=US')
       .then(response => response.json())
       .then((data) => {
         this.setState({
@@ -29,7 +29,7 @@ class ShowList extends React.Component {
     const {showList} = this.state;
     return (
       <div className="showlist">
-        {showList.map(({id, name, image}, index) => {
+        {showList.map(({id, name, image, rating}, index) => {
           const pathname = name.replace(/\W+/g, '-').toLowerCase();
           return (
             <Link
@@ -43,6 +43,9 @@ class ShowList extends React.Component {
                 <img src={image.original} alt={name} />
               }
               <h2>{name}</h2>
+              {rating &&
+                <p>{rating.average}</p>
+              }
             </Link>
           );
         })}

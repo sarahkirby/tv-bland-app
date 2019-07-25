@@ -1,8 +1,9 @@
 import React from 'react';
+import ShowSingle from 'components/ShowSingle/ShowSingle';
 
- const Show = () => (
+ const Show = (props) => (
   <div className="show">
-    <h1>Show</h1>
+    <ShowSingle showId={props.location.state.id} />
   </div>
  );
 
