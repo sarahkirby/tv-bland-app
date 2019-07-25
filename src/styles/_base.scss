@@ -1,0 +1,70 @@
+:root {
+  font-size: 10px;
+  text-size-adjust: 100%;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 1.6rem/1.6 $font-body;
+  letter-spacing: .01em;
+  color: $black;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+
+main {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  transition: all .6s ease;
+}
+
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+  max-width: 60rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font: normal #{$h1-fs}/1.4 $font-heading, sans-serif;
+  letter-spacing: .1rem;
+}
+
+h2 {
+  font: normal #{$h2-fs}/1.4 $font-heading, sans-serif;
+  letter-spacing: .1rem;
+}
+
+h3 {
+  font: normal #{$h3-fs}/1.4 $font-heading, sans-serif;
+  letter-spacing: .1rem;
+}
+
+h4 {
+  font: normal #{$h4-fs}/1.4 $font-heading, sans-serif;
+}

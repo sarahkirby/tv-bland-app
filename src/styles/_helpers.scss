@@ -1,0 +1,7 @@
+.l-container {
+  margin: $spacing-xs;
+
+  @media screen and (min-width: 768px) {
+    margin: $spacing-l;
+  }
+}
