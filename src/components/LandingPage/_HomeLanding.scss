@@ -1,0 +1,14 @@
+.homelanding {
+  padding: $spacing-xs;
+  background-color: $black;
+  min-height: 40vh;
+  color: $white;
+
+  @media screen and (min-width: 768px) {
+    padding: $spacing-l;
+  }
+}
+
+.homelanding__title {
+  opacity: .8;
+}

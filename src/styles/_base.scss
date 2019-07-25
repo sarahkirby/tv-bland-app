@@ -1,5 +1,5 @@
 :root {
-  font-size: 10px;
+  font-size: 14px;
   text-size-adjust: 100%;
 
   @media screen and (min-width: 1024px) {
@@ -13,6 +13,7 @@ body {
   font: 400 1.6rem/1.6 $font-body;
   letter-spacing: .01em;
   color: $black;
+  box-sizing: border-box;
 
   @media screen and (min-width: 1024px) {
     margin-top: 0;
@@ -51,12 +52,12 @@ h6 {
 }
 
 h1 {
-  font: normal #{$h1-fs}/1.4 $font-heading, sans-serif;
+  font: 700 #{$h1-fs}/1.4 $font-heading, sans-serif;
   letter-spacing: .1rem;
 }
 
 h2 {
-  font: normal #{$h2-fs}/1.4 $font-heading, sans-serif;
+  font: 700 #{$h2-fs}/1.4 $font-heading, sans-serif;
   letter-spacing: .1rem;
 }
 

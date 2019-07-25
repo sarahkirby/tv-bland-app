@@ -29,7 +29,7 @@ class ShowList extends React.Component {
   render() {
     const {showList} = this.state;
     return (
-      <div className="showlist">
+      <section className="showlist l-container">
         {showList.map(({id, name, image, rating}, index) => {
           const pathname = name.replace(/\W+/g, '-').toLowerCase();
           return (
@@ -39,18 +39,27 @@ class ShowList extends React.Component {
                 state: {id}
               }}
               key={index}
+              className="showlist__item"
             >
-              {image &&
-                <img src={image.original} alt={name} />
-              }
-              <h2>{name}</h2>
+              <div className="showlist__image-wrapper">
+                {image &&
+                  <img
+                    src={image.original}
+                    alt={name}
+                    className="showlist__image"
+                  />
+                }
+              </div>
+
               {rating &&
                 <ShowRating rating={rating.average} />
               }
+
+              <h4 className="showlist__title">{name}</h4>
             </Link>
           );
         })}
-      </div>
+      </section>
     );
   }
 }
