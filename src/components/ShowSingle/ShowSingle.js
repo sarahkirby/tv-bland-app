@@ -1,5 +1,7 @@
 import React from 'react';
-import ShowRating from 'components/ShowRating/ShowRating';
+import ShowHeader from 'components/ShowSingle/ShowHeader';
+import ShowInfo from 'components/ShowSingle/ShowInfo';
+import Cast from 'components/ShowSingle/Cast';
 
 class ShowSingle extends React.Component {
   state = {
@@ -20,7 +22,9 @@ class ShowSingle extends React.Component {
       const cast = await castData.json();
       this.setState({
         show,
-        cast
+        cast: cast.slice(0, 5).map(person => ({
+          cast: person
+        }))
       });
     })
     .catch((err) => {
@@ -31,46 +35,29 @@ class ShowSingle extends React.Component {
   render() {
     const {name, genres, image, rating, summary,
           status, schedule, network, officialSite} = this.state.show;
-    const regex = /(<([^>]+)>)/ig;
-    const summaryCleanHTML = summary ? summary.replace(regex, '') : '';
+
+    const {cast} = this.state;
+
+    const summaryCleanHTML = summary ? summary.replace(/(<([^>]+)>)/ig, '') : '';
+
     return (
       <div className="showsingle">
-        <p>{name}</p>
-        <p>{genres}</p>
+        <ShowHeader
+          name={name}
+          rating={rating}
+          image={image}
+          summary={summaryCleanHTML}
+        />
 
-        {rating &&
-          <ShowRating rating={rating.average} />
-        }
+        <ShowInfo
+          network={network}
+          officialSite={officialSite}
+          schedule={schedule}
+          status={status}
+          genres={genres}
+        />
 
-        {image &&
-          <p>{image.medium}</p>
-        }
-
-        {summaryCleanHTML}
-
-        {status}
-
-        {schedule &&
-          <div>
-            {schedule.days.map((day, index) =>
-              <div key={index}>
-                <ul>
-                  <li>{day}</li>
-                </ul>
-              </div>
-            )}
-          </div>
-        }
-
-        {network &&
-          <a
-            href={officialSite}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          <p>{network.name}</p>
-          </a>
-        }
+        <Cast cast={cast} />
       </div>
     );
   }
