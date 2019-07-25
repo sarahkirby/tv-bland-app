@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowRating from 'components/ShowRating/ShowRating';
 
 class ShowSingle extends React.Component {
   state = {
@@ -38,7 +39,7 @@ class ShowSingle extends React.Component {
         <p>{genres}</p>
 
         {rating &&
-          <p>{rating.average}</p>
+          <ShowRating rating={rating.average} />
         }
 
         {image &&

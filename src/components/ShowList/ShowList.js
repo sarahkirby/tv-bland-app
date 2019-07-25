@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import ShowRating from 'components/ShowRating/ShowRating';
 
 class ShowList extends React.Component {
   state = {
@@ -44,7 +45,7 @@ class ShowList extends React.Component {
               }
               <h2>{name}</h2>
               {rating &&
-                <p>{rating.average}</p>
+                <ShowRating rating={rating.average} />
               }
             </Link>
           );
