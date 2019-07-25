@@ -1,11 +1,81 @@
+// Layout
 .l-container {
-  margin: $spacing-xs;
+  padding: $spacing-xs;
+  box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
-    margin: $spacing-l;
+    padding: $spacing-l;
   }
 }
 
+
+// Typography
+.font--white {
+  color: $white;
+  opacity: .8;
+}
+
+.font--black {
+  color: $black;
+}
+
+
+// Buttons
+.btn {
+  padding: .5em 1em .6em;
+  border-radius: 5em;
+  font-size: .9rem;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: all .4s ease;
+
+  &:focus {
+    outline: 1px dotted $blue;
+  }
+}
+
+.btn__blue--ghost {
+  color: $blue;
+  border: 1px solid $blue;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+
+// Opacity
 .o-40 {
   opacity: .4;
+}
+
+
+// Image ratio
+.image-ratio__wrapper {
+  position: relative;
+  padding-top: 480px / 320px * 100%;
+}
+
+.image-ratio__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+// Overlay
+.overlay__gradient--black {
+  background: $black;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(90deg, black 54%, rgba(0, 0, 0, 0.8) 77%, rgba(0, 0, 0, 0.4) 100%);
+  }
 }

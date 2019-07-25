@@ -41,18 +41,21 @@ class ShowList extends React.Component {
               key={index}
               className="showlist__item"
             >
-              <div className="showlist__image-wrapper">
+              <div className="showlist__image-wrapper image-ratio__wrapper">
                 {image &&
                   <img
                     src={image.original}
                     alt={name}
-                    className="showlist__image"
+                    className="showlist__image image-ratio__image"
                   />
                 }
               </div>
 
               {rating &&
-                <ShowRating rating={rating.average} />
+                <ShowRating
+                  rating={rating.average}
+                  color="font--black"
+                />
               }
 
               <h4 className="showlist__title">{name}</h4>
