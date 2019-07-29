@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   border-radius: $site-br $site-br 0 0;
+  transition: opacity 1s ease;
   
   @media screen and (min-width: 768px) {  
     background-size: 60% auto;
@@ -43,4 +44,9 @@
 
 .homelanding__content {
   position: relative;
+}
+
+// Animate on scroll
+.out .homelanding {
+  opacity: 0;
 }

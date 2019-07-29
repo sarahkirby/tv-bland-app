@@ -1,11 +1,20 @@
 .showheader {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
   border-radius: $site-br $site-br 0 0;
 }
 
+.showheader__bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: auto;
+  transition: opacity 1s ease;
+}
+
 .showheader__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: inherit;
@@ -53,4 +62,9 @@
   .showheader__content {
     margin: 0 0 0 $spacing-l;
   }
+}
+
+// Animate on scroll
+.out .showheader__bg-image {
+  opacity: 0;
 }
