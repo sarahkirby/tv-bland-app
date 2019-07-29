@@ -1,4 +1,4 @@
-.showlist {
+.showlist__grid {
   display: grid;
   grid-gap: $spacing-xs $spacing-xs / 3;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -6,7 +6,6 @@
 
 .showlist__image-wrapper {
   border-radius: .1em;
-  border: 1px solid $grey;
 }
 
 .showlist__image {
@@ -14,5 +13,5 @@
 }
 
 .showlist__title {
-  color: $black;
+  color: $white;
 }

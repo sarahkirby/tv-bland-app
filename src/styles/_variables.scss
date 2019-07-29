@@ -1,12 +1,14 @@
 // Colours
 $black: #121212;
+$black-light: #272626;
 $white: #ffffff;
 $grey: #e6e6e6;
 $blue: #006aff;
 
 // Typography
-$font-heading: 'Barlow Condensed', sans-serif;
-$font-body: 'Maven Pro', sans-serif;
+$font-heading-lg: 'DK Drop Dead Gorgeous', sans-serif;
+$font-heading-sm: 'Gilroy', sans-serif;
+$font-body: 'Gilroy Light', sans-serif;
 
 // Font size
 $h1-fs: 4.2rem;
@@ -17,3 +19,6 @@ $h4-fs: 1.4rem;
 // Layout / Spacing
 $spacing-xs:  2.4rem;
 $spacing-l: 5rem;
+
+// Box Shadow
+$box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);

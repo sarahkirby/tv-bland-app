@@ -28,40 +28,54 @@ class ShowList extends React.Component {
 
   render() {
     const {showList} = this.state;
+    console.log(showList)
     return (
       <section className="showlist l-container">
-        {showList.map(({id, name, image, rating}, index) => {
-          const pathname = name.replace(/\W+/g, '-').toLowerCase();
-          return (
-            <Link
-              to={{
-                pathname: `/show/${pathname}`,
-                state: {id}
-              }}
-              key={index}
-              className="showlist__item"
-            >
-              <div className="showlist__image-wrapper image-ratio__wrapper">
-                {image &&
-                  <img
-                    src={image.original}
-                    alt={name}
-                    className="showlist__image image-ratio__image"
-                  />
-                }
-              </div>
 
-              {rating &&
-                <ShowRating
-                  rating={rating.average}
-                  color="font--black"
-                />
-              }
+        {!showList.length &&
+          <h1>Loading...</h1>
+        }
 
-              <h4 className="showlist__title">{name}</h4>
-            </Link>
-          );
-        })}
+        {showList.length > 0 &&
+          <div>
+            <h2>Last Added Shows</h2>
+            <div className="showlist__grid">
+              {showList.map(({id, name, image, rating}, index) => {
+                const pathname = name.replace(/\W+/g, '-').toLowerCase();
+                return (
+                  <Link
+                    to={{
+                      pathname: `/show/${pathname}`,
+                      state: {id}
+                    }}
+                    key={index}
+                    className="showlist__item"
+                  >
+                    <div className="showlist__image-wrapper image-ratio__wrapper">
+                      {image &&
+                        <img
+                          src={image.original}
+                          alt={name}
+                          className="showlist__image image-ratio__image"
+                        />
+                      }
+                    </div>
+      
+                    {rating &&
+                      <ShowRating
+                        rating={rating.average}
+                        color="font--white"
+                      />
+                    }
+      
+                    <h4 className="showlist__title">{name}</h4>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        }
+        
       </section>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
  const ShowRating = (props) => {
   const outOfFive = props.rating / 2;
-  const ratingRounded = Math.round(outOfFive / 2);
+  const ratingRounded = Math.round(outOfFive);
   return (
     <div className={`showrating ${props.color ? props.color : ''}`}>
       <i className={`showrating__star fa-star ${ratingRounded >= 1 ? `fas` : `far o-40`}`} />
