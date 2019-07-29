@@ -1,8 +1,46 @@
 .homelanding {
-  padding: $spacing-xs;
-  min-height: 40vh;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: $site-br $site-br 0 0;
+  
+  @media screen and (min-width: 768px) {  
+    background-size: 60% auto;
+    background-position: top right;
+  }
+}
+
+.homelanding__overlay {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  background: rgba($black, .9);
+  border-radius: inherit;
 
   @media screen and (min-width: 768px) {
-    padding: $spacing-l;
+    background: linear-gradient(90deg, black 40%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 100%);
   }
+}
+
+.homelanding__type-detail {
+  position: absolute;
+  right: $spacing-xs;
+  top: $spacing-l;
+  font-size: 8rem;
+  text-align: right;
+  line-height: 1;
+  mix-blend-mode: multiply;
+  user-select: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12rem;
+  }
+}
+
+.homelanding__title {
+  margin-bottom: .5rem;
+}
+
+.homelanding__content {
+  position: relative;
 }

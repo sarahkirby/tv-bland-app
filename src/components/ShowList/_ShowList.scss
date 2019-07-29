@@ -4,12 +4,24 @@
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
+.showlist__item:hover {
+  transform: scale(1.1);
+  transition: all .6s ease;
+  z-index: 1;
+
+  .showlist__image {
+    box-shadow: $box-shadow--dark;
+  }
+}
+
 .showlist__image-wrapper {
+  margin-bottom: .5rem;
   border-radius: .1em;
 }
 
 .showlist__image {
   border-radius: inherit;
+  transition: all .4s ease;
 }
 
 .showlist__title {

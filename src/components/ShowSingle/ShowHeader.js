@@ -58,7 +58,7 @@ class ShowHeader extends React.Component {
 
             <button
               onClick={e => this.readMoreText(e)}
-              className="showheader__btn btn btn__blue--ghost"
+              className="showheader__btn btn btn__blue"
             >
               {readMore ? 'Read less' : 'Read more'}
             </button>

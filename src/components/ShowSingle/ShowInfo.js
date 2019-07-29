@@ -1,6 +1,6 @@
 import React from 'react';
 
- const ShowInfo = (props) => console.log(props) || (
+ const ShowInfo = (props) => (
   <div className="showinfo">
     <h2>Show Info</h2>
 

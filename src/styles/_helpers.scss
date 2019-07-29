@@ -18,12 +18,16 @@
   color: $black-med;
 }
 
+.font--blue {
+  color: $blue;
+}
+
 .font--reg {
   font-weight: 400;
 }
 
-.text--secondary {
-  opacity: .6;
+.heading--large {
+  font-size: 4.5rem;
 }
 
 
@@ -39,6 +43,17 @@
 
   &:focus {
     outline: 1px dotted $blue;
+  }
+}
+
+.btn__blue {
+  color: $white;
+  border: 1px solid $blue;
+  background-color: $blue;
+
+  &:hover {
+    background-color: transparent;
+    color: $blue;
   }
 }
 
@@ -70,6 +85,9 @@
   opacity: .4;
 }
 
+.o-50 {
+  opacity: .5;
+}
 
 // Image
 .image-ratio__wrapper {

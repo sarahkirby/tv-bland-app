@@ -28,12 +28,11 @@ class ShowList extends React.Component {
 
   render() {
     const {showList} = this.state;
-    console.log(showList)
     return (
       <section className="showlist l-container">
 
         {!showList.length &&
-          <h1>Loading...</h1>
+          <h2>Loading...</h2>
         }
 
         {showList.length > 0 &&
@@ -64,7 +63,7 @@ class ShowList extends React.Component {
                     {rating &&
                       <ShowRating
                         rating={rating.average}
-                        color="font--white"
+                        color="font--blue"
                       />
                     }
       
