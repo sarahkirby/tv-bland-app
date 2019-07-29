@@ -68,7 +68,7 @@ class ShowList extends React.Component {
                       />
                     }
       
-                    <h4 className="showlist__title">{name}</h4>
+                    <h5 className="showlist__title">{name}</h5>
                   </Link>
                 );
               })}

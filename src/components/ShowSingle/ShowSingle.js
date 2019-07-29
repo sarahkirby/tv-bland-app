@@ -49,15 +49,17 @@ class ShowSingle extends React.Component {
           summary={summaryCleanHTML}
         />
 
-        <ShowInfo
-          network={network}
-          officialSite={officialSite}
-          schedule={schedule}
-          status={status}
-          genres={genres}
-        />
+        <div className="showsingle__content l-container">
+          <ShowInfo
+            network={network}
+            officialSite={officialSite}
+            schedule={schedule}
+            status={status}
+            genres={genres}
+          />
 
-        <Cast cast={cast} />
+          <Cast cast={cast} />
+        </div>
       </div>
     );
   }

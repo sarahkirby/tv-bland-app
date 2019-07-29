@@ -1,0 +1,45 @@
+.showsingle__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.showinfo {
+  flex-grow: 1;
+}
+
+// Cast
+
+.cast {
+  flex-grow: 1;
+}
+
+.cast__list {
+  list-style: none;
+}
+
+.cast__item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.cast__info {
+  padding-left: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.cast__actor,
+.cast__character {
+  flex-basis: 0;
+}
+
+.cast__actor {
+  flex-grow: 2;
+}
+
+.cast__character {
+  flex-grow: 1;
+}
