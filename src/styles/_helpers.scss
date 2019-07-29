@@ -15,7 +15,7 @@
 }
 
 .font--black {
-  color: $black;
+  color: $black-med;
 }
 
 .font--reg {
@@ -50,6 +50,17 @@
   &:hover {
     background-color: $blue;
     color: $white;
+  }
+}
+
+
+// Link
+.link {
+  color: $white;
+  border-bottom: 2px solid $blue;
+
+  &:hover {
+    color: $blue;
   }
 }
 

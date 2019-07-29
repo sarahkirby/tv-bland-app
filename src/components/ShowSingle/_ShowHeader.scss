@@ -12,7 +12,7 @@
 
 .showheader__visual {
   margin: 0 auto;
-  width: 15rem;
+  min-width: 15rem;
 }
 
 .showheader__content {
@@ -50,6 +50,6 @@
   }
 
   .showheader__content {
-    margin: 0 $spacing-l;
+    margin: 0 0 0 $spacing-l;
   }
 }

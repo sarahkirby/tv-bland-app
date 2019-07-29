@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 1400px;
-  background-color: $black;
+  background-color: $black-med;
   font: 400 1.1rem/1.6 'Gilroy';
   letter-spacing: .01em;
   color: $white;
@@ -30,7 +30,7 @@ body {
 @media screen and (min-width: 768px) {
   .app {
     margin: 1.5rem 2rem;
-    background-color: $black;
+    background-color: $black-med;
     border-radius: $site-br;
     box-shadow: $box-shadow;
   }
@@ -46,7 +46,7 @@ button {
 
 a {
   text-decoration: none;
-  transition: all .6s ease;
+  transition: all .4s ease;
 }
 
 ul,
