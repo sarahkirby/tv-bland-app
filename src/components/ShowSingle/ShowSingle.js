@@ -36,30 +36,37 @@ class ShowSingle extends React.Component {
     const {name, genres, image, rating, summary,
           status, schedule, network, officialSite} = this.state.show;
 
-    const {cast} = this.state;
+    const {cast, show} = this.state;
 
     const summaryCleanHTML = summary ? summary.replace(/(<([^>]+)>)/ig, '') : '';
-
     return (
-      <div className="showsingle">
-        <ShowHeader
-          name={name}
-          rating={rating}
-          image={image}
-          summary={summaryCleanHTML}
-        />
+      <div>
+        {!show &&
+          <h2 className="is-loading">Loading...</h2>
+        }
 
-        <div className="showsingle__content l-container">
-          <ShowInfo
-            network={network}
-            officialSite={officialSite}
-            schedule={schedule}
-            status={status}
-            genres={genres}
-          />
+        {show &&
+          <div className="showsingle">
+            <ShowHeader
+              name={name}
+              rating={rating}
+              image={image}
+              summary={summaryCleanHTML}
+            />
 
-          <Cast cast={cast} />
-        </div>
+            <div className="showsingle__content l-container">
+              <ShowInfo
+                network={network}
+                officialSite={officialSite}
+                schedule={schedule}
+                status={status}
+                genres={genres}
+              />
+
+              <Cast cast={cast} />
+            </div>
+          </div>
+        }
       </div>
     );
   }

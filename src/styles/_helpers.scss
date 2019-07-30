@@ -89,14 +89,12 @@
   opacity: .4;
 }
 
-.o-50 {
-  opacity: .5;
-}
 
 // Image
 .image-ratio__wrapper {
   position: relative;
   padding-top: 480px / 320px * 100%;
+  background-color: $grey;
 }
 
 .image-ratio__image {
@@ -112,6 +110,7 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+  background-color: $grey;
   overflow: hidden;
 }
 
@@ -130,4 +129,10 @@
   @media screen and (min-width: 768px) {
     background: linear-gradient(90deg, black 54%, rgba(0, 0, 0, 0.8) 77%, rgba(0, 0, 0, 0.4) 100%);
   }
+}
+
+
+// Loading state
+.is-loading {
+  text-align: center;
 }

@@ -13,7 +13,13 @@ class ShowList extends React.Component {
 
   fetchShowList = () => {
     fetch('http://api.tvmaze.com/schedule?country=US')
-      .then(response => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Something went wrong');
+        }
+      })
       .then((data) => {
         this.setState({
           showList: data.map(show => ({
@@ -23,6 +29,9 @@ class ShowList extends React.Component {
             rating: show.show.rating,
         }))
       });
+    })
+    .catch((error) => {
+      console.log(error);
     });
   }
 
@@ -32,7 +41,7 @@ class ShowList extends React.Component {
       <section className="showlist l-container">
 
         {!showList.length &&
-          <h2>Loading...</h2>
+          <h2 className="is-loading">Loading...</h2>
         }
 
         {showList.length > 0 &&
