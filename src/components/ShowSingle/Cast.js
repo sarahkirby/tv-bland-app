@@ -13,11 +13,13 @@ import React from 'react';
               className="cast__item"
             >
               <div className="image-circle__wrapper">
-                <img
-                  src={person.cast.person.image.medium}
-                  alt={person.cast.person.name}
-                  className="cast__image image-circle__image"
-                />
+                {person.cast.person.image &&
+                  <img
+                    src={person.cast.person.image.medium}
+                    alt={person.cast.person.name}
+                    className="cast__image image-circle__image"
+                  />
+                }
               </div>
 
               <div className="cast__info">

@@ -12,7 +12,7 @@
 .showinfo__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: $spacing-xs / 2;
+  grid-gap: 1.5rem;
   list-style: none;
 }
 

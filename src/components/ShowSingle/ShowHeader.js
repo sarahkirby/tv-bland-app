@@ -58,7 +58,7 @@ class ShowHeader extends React.Component {
                 {name}
               </h1>
 
-              <p className="showheader__summary font--white">
+              <p className="showheader__summary font--white font--secondary">
                 {!readMore &&
                   <span>{shortSummary}...</span>
                 }

@@ -30,6 +30,10 @@ body {
 @media screen and (min-width: 768px) {
   .app {
     margin: 1.5rem 2rem;
+    position: relative;
+  }
+
+  .app__wrapper {
     background-color: $black-med;
     border-radius: $site-br;
     box-shadow: $box-shadow;
@@ -91,4 +95,24 @@ h4 {
 h5 {
   font: bold #{$h5-fs}/1.4 $font-heading-sm;
   letter-spacing: .05rem;
+}
+
+// Nav logo
+.nav__logo {
+  padding: 1.5rem $spacing-xs;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.6rem;
+  opacity: .7;
+  z-index: 2;
+  transition: opacity .4s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: $spacing-xs $spacing-l;
+  }
 }

@@ -22,7 +22,7 @@ import HomeLandingBg from 'assets/images/homelanding-bg.png';
 
           <h3>TV Show and web series database.</h3>
 
-          <h5 className="o-50 font--reg">
+          <h5 className="font--reg font--secondary">
             Create personlised schedules.
             <br />
             Episode guide, cast, crew and character information.
