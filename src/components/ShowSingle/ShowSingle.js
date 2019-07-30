@@ -15,8 +15,8 @@ class ShowSingle extends React.Component {
 
   fetchShowInfo = () => {
     Promise.all([
-      fetch(`http://api.tvmaze.com/shows/${this.props.showId}`),
-      fetch(`http://api.tvmaze.com/shows/${this.props.showId}/cast`)
+      fetch(`https://api.tvmaze.com/shows/${this.props.showId}`),
+      fetch(`https://api.tvmaze.com/shows/${this.props.showId}/cast`)
     ]).then(async([showData, castData]) => {
       const show = await showData.json();
       const cast = await castData.json();

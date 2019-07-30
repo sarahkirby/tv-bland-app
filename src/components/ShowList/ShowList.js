@@ -12,7 +12,7 @@ class ShowList extends React.Component {
   }
 
   fetchShowList = () => {
-    fetch('http://api.tvmaze.com/schedule?country=US')
+    fetch('https://api.tvmaze.com/schedule?country=US')
       .then((response) => {
         if (response.ok) {
           return response.json();
