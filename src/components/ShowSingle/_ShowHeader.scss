@@ -22,7 +22,7 @@
 
 .showheader__visual {
   margin: 0 auto;
-  min-width: 15rem;
+  min-width: 100%;
 }
 
 .showheader__content {
@@ -38,11 +38,16 @@
 
 .showheader__summary {
   margin-bottom: $spacing-xs / 2;
-  font-size: .95rem;
 }
 
 .showheader__btn {
   align-self: flex-start;
+}
+
+@media screen and (min-width: 568px) {
+  .showheader__visual {
+    min-width: 15rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -61,6 +66,10 @@
 
   .showheader__content {
     margin: 0 0 0 $spacing-l;
+  }
+
+  .showheader__summary {
+    font-size: .95rem;
   }
 }
 

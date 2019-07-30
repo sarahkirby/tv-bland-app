@@ -25,7 +25,7 @@ import React from 'react';
                   {person.cast.person.name}
                 </h4>
 
-                <h5 className="cast__character font--reg">
+                <h5 className="cast__character font--reg font--secondary">
                   {person.cast.character.name.split(" ")[0]}
                 </h5>
               </div>

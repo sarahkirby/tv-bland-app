@@ -17,17 +17,21 @@ class ShowHeader extends React.Component {
     const {image, name, rating, summary} = this.props;
     const {readMore} = this.state;
 
-    const headerBackground = image ? image.original : '';
     const maxLength = summary.substr(0, 300);
     const shortSummary = maxLength.substr(0, Math.min(maxLength.length, maxLength.lastIndexOf(" ")));
     return (
       <ScrollListener>
         <div className="showheader">
-          <img
-            src={headerBackground}
-            role="presentation"
-            className="showheader__bg-image"
-          />
+
+          {image &&
+            <img
+              src={image.original}
+              alt={name}
+              role="presentation"
+              className="showheader__bg-image"
+            />
+          }
+
           <div className="showheader__wrapper overlay__gradient--black l-container">
             <div className="showheader__visual">
               <div className="image-ratio__wrapper">

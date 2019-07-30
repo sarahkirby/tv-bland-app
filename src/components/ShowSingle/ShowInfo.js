@@ -7,13 +7,15 @@ import React from 'react';
     <ul className="showinfo__list">
       {props.network &&
         <li className="showinfo_item">
-          <h4 className="showinfo__title">Streamed on</h4>
+          <h4 className="showinfo__title">
+            Streamed on
+          </h4>
           <span className="showinfo__content">
             <a
               href={props.officialSite}
               target="_blank"
               rel="noopener noreferrer"
-              className="link"
+              className="link font--secondary"
             >
               {props.network.name}
             </a>
@@ -23,8 +25,10 @@ import React from 'react';
 
       {props.schedule &&
         <li className="showinfo_item">
-          <h4 className="showinfo__title">Schedule</h4>
-          <span className="showinfo__content">
+          <h4 className="showinfo__title">
+            Schedule
+          </h4>
+          <span className="showinfo__content font--secondary">
             {props.schedule.days.length > 1
               ? props.schedule.days.join(', ')
               : `${props.schedule.days}s`
@@ -35,15 +39,21 @@ import React from 'react';
 
       {props.status &&
         <li className="showinfo_item">
-          <h4 className="showinfo__title">Status</h4>
-          <span className="showinfo__content">{props.status}</span>
+          <h4 className="showinfo__title">
+            Status
+          </h4>
+          <span className="showinfo__content font--secondary">
+            {props.status}
+          </span>
         </li>
       }
 
       {props.genres && props.genres.length > 0 &&
         <li className="showinfo_item">
-          <h4 className="showinfo__title">Genres</h4>
-          <span className="showinfo__content">
+          <h4 className="showinfo__title">
+            Genres
+          </h4>
+          <span className="showinfo__content font--secondary">
             {props.genres.join(', ')}
           </span>
         </li>

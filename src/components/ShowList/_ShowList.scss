@@ -1,9 +1,27 @@
 .showlist__grid {
   display: grid;
   grid-gap: $spacing-xs $spacing-xs / 3;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  // Hide showrating on mobile
+  .showrating {
+    display: none;
+  }
+
+  // Display showrating
+  @media screen and (min-width: 568px) {
+    .showrating {
+      display: block;
+    }
+  }
+
+  // Tweak min width of grid items
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 }
 
+// Hover state of grid items
 .showlist__item:hover {
   transform: scale(1.1);
   transition: all .6s ease;

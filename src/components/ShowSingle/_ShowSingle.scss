@@ -2,12 +2,35 @@
   display: grid;
   grid-gap: $spacing-xs;
   grid-template-columns: 1fr;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
+// Show Info
+.showinfo {
+  margin-bottom: $spacing-xs;
+}
+
+.showinfo__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $spacing-xs / 2;
+  list-style: none;
+}
+
+.showinfo__title {
+  margin: 0 1rem .25rem 0;
+  display: inline-block;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.showinfo__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  flex-grow: 2;
+}
+
+//  Cast
 .cast__list {
   list-style: none;
 }
@@ -20,53 +43,49 @@
 
 .cast__info {
   padding-left: 2rem;
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
 }
 
-.cast__actor,
-.cast__character {
-  flex-basis: 0;
+@media screen and (min-width: 768px) {
+  .showsingle__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showinfo__list {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  .showinfo_item {
+    padding: 1.2rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($white, .1);
+  }
+
+  .showinfo__title {
+    margin-bottom: 0;
+  }
 }
 
-.cast__actor {
-  flex-grow: 2;
-}
-
-.cast__character {
-  flex-grow: 1;
-}
-
-
-// Show Info
-
-.showinfo {
-  margin-bottom: $spacing-xs;
-}
-
-.showinfo__list {
-  list-style: none;
-}
-
-.showinfo_item {
-  padding: 1.2rem 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba($white, .1);
-}
-
-.showinfo__title {
-  margin-right: 1rem;
-  display: inline-block;
-  flex-basis: 0;
-  flex-grow: 1;
-}
-
-.showinfo__content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 0;
-  flex-grow: 2;
+@media screen and (min-width: 1024px) {
+  .cast__info {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  
+  .cast__actor,
+  .cast__character {
+    flex-basis: 0;
+  }
+  
+  .cast__actor {
+    margin-right: 1rem;
+    flex-grow: 2;
+  }
+  
+  .cast__character {
+    flex-grow: 1;
+  }
 }
