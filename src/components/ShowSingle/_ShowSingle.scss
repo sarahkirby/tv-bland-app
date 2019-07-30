@@ -12,12 +12,12 @@
 .showinfo__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   list-style: none;
 }
 
 .showinfo__title {
-  margin: 0 1rem .25rem 0;
+  margin: 0 1rem .5rem 0;
   display: inline-block;
   flex-basis: 0;
   flex-grow: 1;

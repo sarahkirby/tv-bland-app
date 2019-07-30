@@ -1,6 +1,5 @@
 .showrating__star {
   padding: 0 .1rem;
-  font-size: .9rem;
 
   .fas {
     opacity: inherit;
@@ -10,5 +9,11 @@
 .showrating__text {
   margin-left: .25rem;
   letter-spacing: .1em;
-  font-size: .9rem;
+}
+
+@media screen and (min-width: 768px) {
+  .showrating__star,
+  .showrating__text {
+    font-size: .9rem;
+  }
 }

@@ -46,7 +46,10 @@ class ShowList extends React.Component {
 
         {showList.length > 0 &&
           <div>
-            <h2>Last Added Shows</h2>
+            <h2 className="showlist__title">
+              Last Added Shows
+            </h2>
+
             <div className="showlist__grid">
               {showList.map(({id, name, image, rating}, index) => {
                 const pathname = name.replace(/\W+/g, '-').toLowerCase();
@@ -76,7 +79,9 @@ class ShowList extends React.Component {
                       />
                     }
       
-                    <h5 className="showlist__title">{name}</h5>
+                    <h5 className="font--white">
+                      {name}
+                    </h5>
                   </Link>
                 );
               })}
